@@ -5,6 +5,7 @@ import router from "./routes/SignUp.js";
 import dotenv from "dotenv";
 import path from 'path';
 dotenv.config();
+const __dirname = path.resolve();
 const app = express();
 
 
