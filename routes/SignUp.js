@@ -5,9 +5,6 @@ import UserSchema from "../models/User.js";
 import nodemailer from "nodemailer";
 const User_Signup_Details = mongoose.model("User_Signup_details",UserSchema);
 
-router.get("/",(req,res)=>{
-    res.send("hello");
-})
 router.post("/signup",(req,res)=>{
     const { username,email,password} = req.body
     User_Signup_Details.findOne({email:email},(err,user)=>{
