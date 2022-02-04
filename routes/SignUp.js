@@ -12,8 +12,6 @@ router.post("/signup",(req,res)=>{
             res.send({message: "User Already Exist"});
         }
         else{
-            console.log(process.env.PORTAL_MAIL_ID);
-            console.log(process.PORTAL_MAIL_PASSWORD);
             const user = new User_Signup_Details({
                 username,
                 email,
